@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - [Nama Kamu]</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .transition-bg { transition: background 0.5s ease, color 0.5s ease; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-600 to-indigo-800 text-white transition-bg dark:from-gray-900 dark:to-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/10 backdrop-blur-md shadow z-50 transition-bg">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">[Nama Kamu]</h1>
+      <div class="flex items-center gap-6 text-sm">
+        <ul class="hidden md:flex gap-6">
+          <li><a href="#home" class="hover:text-blue-300 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-300 transition">Tentang</a></li>
+          <li><a href="#portfolio" class="hover:text-blue-300 transition">Portofolio</a></li>
+          <li><a href="#contact" class="hover:text-blue-300 transition">Kontak</a></li>
+        </ul>
+        <button id="theme-toggle" class="bg-white/20 hover:bg-white/30 text-white rounded-full px-3 py-1 transition">
+          🌙
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <img src="https://via.placeholder.com/160" alt="Foto Profil"
+         class="rounded-full border-4 border-white shadow-xl w-40 h-40 mb-6 hover:scale-105 transition-transform duration-300" data-aos="fade-up" />
+    <h1 class="text-4xl font-bold mb-2" data-aos="fade-up" data-aos-delay="100">[Nama Kamu]</h1>
+    <h3 class="text-lg text-blue-200 mb-4" data-aos="fade-up" data-aos-delay="200">Web Developer | UI/UX Designer | Freelancer</h3>
+    <p class="max-w-xl text-blue-100 leading-relaxed" data-aos="fade-up" data-aos-delay="300">
+      Saya fokus membuat website modern, cepat, dan interaktif dengan pengalaman pengguna yang menyenangkan.
+    </p>
+    <a href="#portfolio" class="mt-6 inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-100 transition" data-aos="zoom-in" data-aos-delay="400">Lihat Portofolio</a>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="py-20 text-center bg-white/10 backdrop-blur-md" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6">Tentang Saya</h2>
+      <p class="text-blue-100 leading-relaxed">
+        Halo! Saya pengembang web dengan keahlian di HTML, CSS, JavaScript, dan framework modern seperti React & Tailwind CSS.
+        Saya menciptakan website dengan desain yang menarik dan performa optimal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portofolio -->
+  <section id="portfolio" class="py-20 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-10">Portofolio</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition" data-aos="zoom-in">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Website Bisnis</h3>
+        <p class="text-blue-100 text-sm mb-3">Website profesional untuk perusahaan modern.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Aplikasi Dashboard</h3>
+        <p class="text-blue-100 text-sm mb-3">Dashboard interaktif berbasis data realtime.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Landing Page Produk</h3>
+        <p class="text-blue-100 text-sm mb-3">Halaman promosi dengan desain konversi tinggi.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="py-20 text-center bg-white/10 backdrop-blur-md" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6">Kontak</h2>
+      <p class="text-blue-100 mb-8">Kirim pesan langsung melalui form berikut:</p>
+
+      <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="space-y-4 max-w-md mx-auto">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+
+        <input type="text" name="nama" placeholder="Nama Anda" required
+               class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input type="email" name="email" placeholder="Email Anda" required
+               class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda..." required
+               class="w-full p-3 rounded-lg bg-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        <button type="submit"
+                class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+          Kirim Pesan
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-blue-200 text-sm">
+    &copy; 2025 [Nama Kamu]. Semua hak dilindungi.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+
+    if (localStorage.theme === 'dark') {
+      html.classList.add('dark');
+      themeToggle.textContent = "☀️";
+    }
+
+    themeToggle.addEventListener("click", () => {
+      html.classList.toggle("dark");
+      const isDark = html.classList.contains("dark");
+      themeToggle.textContent = isDark ? "☀️" : "🌙";
+      localStorage.theme = isDark ? "dark" : "light";
+    });
+  </script>
+</body>
+</html>
