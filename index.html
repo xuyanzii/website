@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jurnal PKL Interaktif</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+
+    form {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #f1f1f1;
+      font-size: 14px;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jurnal PKL</h1>
+    <p>Nama: [Nama Kamu] | NIS/NIM: [Nomor] | Tempat PKL: [Nama Instansi]</p>
+  </header>
+
+  <main>
+    <h2>Isi Jurnal Harian</h2>
+
+    <form id="jurnalForm">
+      <div>
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" required />
+      </div>
+      <div>
+        <label for="kegiatan">Kegiatan:</label>
+        <textarea id="kegiatan" rows="2" required></textarea>
+      </div>
+      <div>
+        <label for="waktu">Waktu:</label>
+        <input type="text" id="waktu" placeholder="Contoh: 08.00 - 12.00" required />
+      </div>
+      <div>
+        <label for="keterangan">Keterangan:</label>
+        <input type="text" id="keterangan" placeholder="Misal: Selesai dengan baik" />
+      </div>
+      <button type="submit">Tambah ke Jurnal</button>
+    </form>
+
+    <h2>Catatan Harian</h2>
+    <table id="tabelJurnal">
+      <thead>
+        <tr>
+          <th>Tanggal</th>
+          <th>Kegiatan</th>
+          <th>Waktu</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <footer>
+    &copy; 2025 Jurnal PKL | Dibuat oleh [Nama Kamu]
+  </footer>
+
+  <script>
+    const form = document.getElementById("jurnalForm");
+    const tabel = document.getElementById("tabelJurnal").querySelector("tbody");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Ambil data dari form
+      const tanggal = document.getElementById("tanggal").value;
+      const kegiatan = document.getElementById("kegiatan").value;
+      const waktu = document.getElementById("waktu").value;
+      const keterangan = document.getElementById("keterangan").value;
+
+      // Tambahkan ke tabel
+      const row = tabel.insertRow();
+      row.innerHTML = `
+        <td>${tanggal}</td>
+        <td>${kegiatan}</td>
+        <td>${waktu}</td>
+        <td>${keterangan}</td>
+      `;
+
+      // Reset form
+      form.reset();
+    });
+  </script>
+</body>
+</html>
