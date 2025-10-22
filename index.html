@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - [Nama Kamu]</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/10 backdrop-blur-md shadow z-50">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">[Nama Kamu]</h1>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="#home" class="hover:text-blue-300 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-300 transition">Tentang</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-300 transition">Portofolio</a></li>
+        <li><a href="#contact" class="hover:text-blue-300 transition">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in pt-20">
+    <img src="https://via.placeholder.com/160" alt="Foto Profil"
+         class="rounded-full border-4 border-white shadow-xl w-40 h-40 mb-6 hover:scale-105 transition-transform duration-300" />
+    <h1 class="text-4xl font-bold mb-2">[Nama Kamu]</h1>
+    <h3 class="text-lg text-blue-200 mb-4">Web Developer | UI/UX Designer | Freelancer</h3>
+    <p class="max-w-xl text-blue-100 leading-relaxed">
+      Saya fokus membuat website modern, cepat, dan interaktif dengan pengalaman pengguna yang menyenangkan.
+    </p>
+    <a href="#portfolio" class="mt-6 inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-100 transition">Lihat Portofolio</a>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about" class="py-20 text-center bg-white/10 backdrop-blur-md fade-in">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6">Tentang Saya</h2>
+      <p class="text-blue-100 leading-relaxed">
+        Halo! Saya adalah pengembang web dengan keahlian di HTML, CSS, JavaScript, dan framework modern seperti React dan Tailwind CSS.
+        Saya juga tertarik pada desain UI/UX untuk menciptakan tampilan yang menarik dan mudah digunakan.
+        Tujuan saya adalah membantu bisnis dan individu memiliki kehadiran digital yang kuat.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portofolio -->
+  <section id="portfolio" class="py-20 text-center fade-in">
+    <h2 class="text-3xl font-semibold mb-10">Portofolio</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+      <!-- Card 1 -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Website Bisnis</h3>
+        <p class="text-blue-100 text-sm mb-3">Website profesional untuk perusahaan modern.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Aplikasi Dashboard</h3>
+        <p class="text-blue-100 text-sm mb-3">Dashboard interaktif berbasis data realtime.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 shadow hover:scale-105 transition">
+        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="rounded-xl mb-4">
+        <h3 class="text-xl font-semibold mb-2">Landing Page Produk</h3>
+        <p class="text-blue-100 text-sm mb-3">Halaman promosi dengan desain konversi tinggi.</p>
+        <a href="#" target="_blank" class="bg-white text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">Lihat Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="py-20 text-center bg-white/10 backdrop-blur-md fade-in">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-6">Kontak</h2>
+      <p class="text-blue-100 mb-8">Tertarik bekerja sama atau sekadar menyapa? Hubungi saya lewat link di bawah ini 👇</p>
+
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="mailto:emailkamu@gmail.com"
+           class="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 transition">Email</a>
+        <a href="https://linkedin.com/in/username" target="_blank"
+           class="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 transition">LinkedIn</a>
+        <a href="https://github.com/username" target="_blank"
+           class="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 transition">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-blue-200 text-sm">
+    &copy; 2025 [Nama Kamu]. Semua hak dilindungi.
+  </footer>
+
+</body>
+</html>
